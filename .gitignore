@@ -1,16 +1,26 @@
+# ---------------------------------------------------------------------------
+# Thư mục chứa thư viện (Dependencies) - Tuyệt đối không đẩy lên Git
+# ---------------------------------------------------------------------------
 node_modules/
-backend/node_modules/
-frontend/node_modules/
+**/node_modules/
 
-# Chặn tất cả các file .env ở mọi ngóc ngách
+# ---------------------------------------------------------------------------
+# Bảo mật: Chặn tất cả các file .env ở mọi ngóc ngách (Gốc, Backend, Frontend)
+# ---------------------------------------------------------------------------
 **/.env
 **/.env.local
+*.local
 
-# Chặn các file build
+# ---------------------------------------------------------------------------
+# Thư mục sản phẩm sau khi build (Production Outputs)
+# ---------------------------------------------------------------------------
 dist/
 dist-ssr/
+**/dist/
 
-# Logs
+# ---------------------------------------------------------------------------
+# Nhật ký hệ thống và file lỗi (Logs)
+# ---------------------------------------------------------------------------
 logs
 *.log
 npm-debug.log*
@@ -19,15 +29,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-.env
-# Editor directories and files
+# ---------------------------------------------------------------------------
+# Cấu hình riêng của các Editor/IDE (VS Code, WebStorm...)
+# ---------------------------------------------------------------------------
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
