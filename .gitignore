@@ -1,0 +1,11 @@
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Chặn tất cả các file .env ở mọi ngóc ngách
+**/.env
+**/.env.local
+
+# Chặn các file build
+dist/
+dist-ssr/
